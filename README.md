@@ -1,2 +1,8 @@
 # dspy_tutorials
 Me coding along various DSPy tutorials
+
+## Tutorials
+
+* Retrieval-Augmented Generation (RAG)
+  * [Tutorial](https://dspy.ai/tutorials/rag/)
+  * [Code](rag.py)
