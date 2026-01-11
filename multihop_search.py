@@ -26,15 +26,18 @@ gpt4o = dspy.LM("openai/gpt-4o", max_tokens=3000)
 
 dspy.configure(lm=llama8b)
 
-file_name = "wiki.abstracts.2017.tar.gz"
+folder_name = "multihop_search"
+file_name = "wiki.abstracts.2017"
 
-download(f"https://huggingface.co/dspy/cache/resolve/main/{file_name}")
-with tarfile.open(file_name, "r:gz") as tar:
-    tar.extractall(filter="data")
+download(f"https://huggingface.co/dspy/cache/resolve/main/{file_name}.tar.gz")
+os.rename(f"{file_name}.tar.gz", f"{folder_name}/{file_name}.tar.gz")
+
+with tarfile.open(f"{folder_name}/{file_name}.tar.gz", "r:gz") as tar:
+    tar.extractall(path=folder_name, filter="data")
 
 corpus: list[str] = []
 
-with open("wiki.abstracts.2017.jsonl") as file:
+with open(f"{folder_name}/{file_name}.jsonl") as file:
     for line in file:
         obj: dict[str, list[str]] = ujson.loads(line)
         corpus.append(f"{obj['title']} | {' '.join(obj['text'])}")
@@ -135,11 +138,11 @@ class Hop(dspy.Module):
         return dspy.Prediction(notes=notes, titles=list(set(titles)))
 
 
-hop = Hop()
+# hop = Hop()
 
 # print(hop(claim="Harry Potter was born in Hogwarts."))
 
-# hop.save("multihop_search.json")
+# hop.save("multihop_search/multihop_search.json")
 
 
 def top_5_recall(
@@ -199,10 +202,10 @@ optimization_kwargs = dict(
 # )
 # dspy.inspect_history(n=2)
 
-# optimized_hop.save("multihop_search_optimized.json")
+# optimized_hop.save("multihop_search/multihop_search_optimized.json")
 
 loaded_hop = Hop()
-loaded_hop.load("multihop_search_optimized.json")
+loaded_hop.load("multihop_search/multihop_search_optimized.json")
 
 print(
     loaded_hop(

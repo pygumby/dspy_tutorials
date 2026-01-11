@@ -102,7 +102,7 @@ react = dspy.ReAct(signature, tools=[search_wikipedia, lookup_wikipedia], max_it
 
 # print(react(claim="David Gregory was born in 1625.").titles[:3])
 
-# react.save("agents.json")
+# react.save("agents/agents.json")
 
 
 def top_5_recall(
@@ -170,7 +170,7 @@ optimizer = dspy.MIPROv2(
 # dspy.inspect_history(n=2)
 
 # Finally, let's save our optimized program so we can use it again later
-# optimized_react.save("agents_optimized.json")
+# optimized_react.save("agents/agents_optimized.json")
 
 loaded_react = dspy.ReAct(
     "claim -> titles: list[str]",
@@ -179,7 +179,7 @@ loaded_react = dspy.ReAct(
         lookup_wikipedia,
     ],
 )
-loaded_react.load("agents_optimized.json")
+loaded_react.load("agents/agents_optimized.json")
 
 print(
     loaded_react(

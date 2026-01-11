@@ -19,6 +19,6 @@ wheels/
 .mypy_cache/
 
 # Application
-wiki.abstracts.2017.tar.gz
-wiki.abstracts.2017.jsonl
-._wiki.abstracts.2017.jsonl
+multihop_search/wiki.abstracts.2017.tar.gz
+multihop_search/wiki.abstracts.2017.jsonl
+multihop_search/._wiki.abstracts.2017.jsonl
