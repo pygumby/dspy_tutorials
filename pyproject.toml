@@ -5,10 +5,14 @@ description = "Me coding along various DSPy tutorials"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "bm25s",
     "datasets==3.6.0",
     "dspy>=3.0.3",
     "faiss-cpu>=1.12.0",
+    "jax[cpu]",
+    "numpy>=2.3.4",
     "pandas>=2.3.3",
+    "pystemmer",
     "python-dotenv>=1.1.1",
     "ujson>=5.11.0",
 ]

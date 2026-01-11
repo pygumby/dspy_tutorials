@@ -1,0 +1,165 @@
+{
+  "generate_query.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "claim": "The population of the terminus of a train route in 2011 was 2,416. The Reynella railway station was part of this route.",
+        "notes": [
+          "Reynella railway station was part of the Willunga railway line in South Australia.",
+          "The claim involves the population of the terminus of a train route in 2011, but the context does not specify the terminus or its population.",
+          "The Willunga railway station was the terminus of the Willunga railway line.",
+          "The population of Willunga in 2011 was 2,416.",
+          "Reynella railway station was part of the Willunga railway line.",
+          "The Willunga railway station was the terminus of the Willunga railway line.",
+          "The population of Willunga in 2011 was 2,416.",
+          "Reynella railway station was part of the Willunga railway line."
+        ],
+        "reasoning": "The claim states that the population of the terminus of a train route in 2011 was 2,416 and mentions the Reynella railway station as part of this route. However, the notes indicate that the specific terminus and its population are not identified in the context provided. To verify the claim, it is necessary to identify the terminus of the Willunga railway line and check its population in 2011. This will help determine if the claim about the population is accurate.",
+        "query": "What was the terminus of the Willunga railway line in South Australia, and what was its population in 2011?"
+      },
+      {
+        "claim": "Royler Gracie was a student of the person who also taught Romero Cavalcanti and ran the Gracie Humaitá school.",
+        "titles": [
+          "Rodrigo Medeiros",
+          "Royler Gracie",
+          "Rolls Gracie"
+        ]
+      }
+    ],
+    "signature": {
+      "instructions": "You are an adept researcher tasked with uncovering the underlying facts and formulating precise questions to fill in knowledge gaps. Given the fields `claim`—which provides a statement to validate or elaborate on—and `notes`—offering initial insights or context—you are to produce the output field `query` that effectively bridges current understanding and the additional information needed. Construct the query in a way that it specifically addresses the points of verification or elaboration dictated by the claim and notes.",
+      "fields": [
+        {
+          "prefix": "Claim:",
+          "description": "${claim}"
+        },
+        {
+          "prefix": "Notes:",
+          "description": "${notes}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Query:",
+          "description": "${query}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "append_notes.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "claim": "This director is known for his work on Miss Potter. The Academy of Motion Picture Arts and Sciences presents the award in which he was nominated for his work in \"Babe\".",
+        "notes": [
+          "Chris Noonan is the director known for 'Miss Potter' and was nominated for an Academy Award for 'Babe'.",
+          "Chris Noonan is the director known for 'Miss Potter' and was nominated for an Academy Award for 'Babe'.",
+          "Chris Noonan is the director known for 'Miss Potter' and was nominated for an Academy Award for 'Babe'.",
+          "Chris Noonan was nominated for both the Academy Award for Best Director and Best Adapted Screenplay for 'Babe'."
+        ],
+        "context": {
+          "Chris Noonan | Chris Noonan (born 14 November 1952) is a Sydney-based Australian filmmaker and actor best known for the family film \"Babe\" (1995), for which he was nominated for both the Academy Award for Best Director and Academy Award for Best Adapted Screenplay.": 24.849063873291016,
+          "Chris Gayne | Chris Gayne is a BAFTA nominated Scottish Sound designer who studied at the Edinburgh College of Art.  He is possibly best known for his work on the short film \"Anna\" which earned him a nomination for the best sound accolade at the 2015 British Academy Scotland New Talent Awards.  He also worked on the film \"Tide\" which received a nomination in the best actor category at the same ceremony.": 18.119474411010742,
+          "Jay Friedkin | Jay Friedkin is a Oscar nominated film editor who was nominated at the 1995 Academy Awards for Best Film Editing for his work on \"Babe\".  He shared the nomination with Marcus D'Arcy.": 17.353057861328125,
+          "Nick Davis (visual effects supervisor) | Nick Davis is a visual effects supervisor who has worked in visual effects since the early 1990s.  He was nominated at the 81st Academy Awards for \"The Dark Knight\".  He was nominated in the category of Best Visual Effects, he shared his nomination with Chris Corbould, Paul Franklin and Tim Webber.": 17.28643226623535,
+          "Patrice Vermette | Patrice Vermette (Born 1970) is a Canadian production designer/art director who has won three awards for his work on \"C.R.A.Z.Y.\", the Genie Award for Best Achievement in Art Direction/Production Design and a Jutra Award for Best Art Direction.  His other work includes \"1981\", \"La Cité\", \"Café de Flore\" and \"The Young Victoria\".  He was nominated for an Academy Award in the category Best Art Direction for his work in the film \"The Young Victoria\".  He was nominated again in the category Best Production Design for his work in the film \"Arrival\" at the 89th Academy Awards.": 17.21099853515625,
+          "Kerrie Brown | Kerrie Brown is a set decorator.  She was nominated for an Academy Award in the category Best Art Direction for the film \"Babe\".": 16.84937858581543,
+          "Chris Carpenter (sound engineer) | Chris Carpenter is an American sound engineer.  He has been nominated for three Academy Awards in the category Best Sound.  He has worked on more than 130 films since 1979.": 16.78066062927246,
+          "Chris Munro | Chris Munro is a British sound engineer.  He has won two Academy Award's for Best Sound and has been nominated for another two in the same category.  He has worked on over 80 films since 1972.": 16.598791122436523,
+          "Ged Wright | Ged Wright is a Academy Award nominated visual effects artist.  He was nominated at the 83rd Academy Awards for his work on the film \"Iron Man 2\".  This was in the category of Best Visual Effects.  For which his nomination was shared with Janek Sirrs, Ben Snow and Dan Sudick.  It lost to \"Inception\".": 16.546674728393555,
+          "Maurizio Silvi | Maurizio Silvi is an Italian make-up artist who was nominated in the category of Academy Award for Best Makeup and Hairstyling during the 74th Academy Awards for his work on the film \"Moulin Rouge! \".  His nomination was shared with Aldo Signoretti.": 16.541200637817383
+        },
+        "reasoning": "The claim states that the director known for \"Miss Potter\" was nominated for an Academy Award for his work on \"Babe\". According to the notes and context, Chris Noonan is the director known for \"Miss Potter\" and was indeed nominated for an Academy Award for \"Babe\". The context confirms that Chris Noonan was nominated for both the Academy Award for Best Director and Best Adapted Screenplay for \"Babe\". Therefore, the claim is accurate.",
+        "new_notes": [
+          "Chris Noonan is the director known for 'Miss Potter' and was nominated for an Academy Award for 'Babe'.",
+          "Chris Noonan was nominated for both the Academy Award for Best Director and Best Adapted Screenplay for 'Babe'."
+        ],
+        "titles": [
+          "Chris Noonan",
+          "Miss Potter",
+          "Babe",
+          "Academy Award for Best Director",
+          "Academy Award for Best Adapted Screenplay"
+        ]
+      },
+      {
+        "augmented": true,
+        "claim": "1990 Film that Khiladiyon Ka Khiladi is loosely based on stars this actor who is best known for martial arts action films.",
+        "notes": [
+          "Khiladiyon Ka Khiladi is loosely based on the Hollywood film Lionheart.",
+          "Jean-Claude Van Damme starred in Lionheart and is known for martial arts action films.",
+          "Khiladiyon Ka Khiladi is loosely based on the Hollywood film Lionheart.",
+          "Jean-Claude Van Damme starred in Lionheart and is known for martial arts action films.",
+          "Khiladiyon Ka Khiladi is loosely based on the Hollywood film Lionheart.",
+          "Jean-Claude Van Damme starred in Lionheart and is known for martial arts action films."
+        ],
+        "context": {
+          "Khiladiyon Ka Khiladi | Khiladiyon Ka Khiladi (English: Player of Players) is a 1996 Indian action film starring Rekha in her first villain role, Akshay Kumar, Raveena Tandon and former WWE wrestlers \"Crush\" and Brian Lee as \"The Undertaker\".  It was the 5th highest grossing movie of the year 1996 and was declared 'SuperHit' by Box Office India.  It was the fourth installment in the Khiladi (film series).  The movie is loosely based based on Hollywood film Lionheart": 40.29141616821289,
+          "Khiladi 420 | Khiladi 420 (English: \"Con Player\") is an Indian Hindi action film directed by Neeraj Vora and starring Akshay Kumar and Mahima Chaudhry.  The film was written by Uttam Gudda and released on 29 December 2000.  It is the seventh installment in the \"Khiladi\" series starring Kumar, which included \"Khiladi\" (1992), \"Main Khiladi Tu Anari\" (1994), \"Sabse Bada Khiladi\" (1995), \"Khiladiyon Ka Khiladi\" (1996), \"Mr. and Mrs. Khiladi\" (1997) and \"International Khiladi\" (1999).": 29.18047332763672,
+          "Khiladi (film series) | Khiladi series is a Bollywood action film series starring Akshay Kumar in the lead role.  However, unlike other film series, other than having Akshay Kumar in lead role, and other than having the word \"Khiladi\" in the title, these films have nothing in common.  The producers, directors and stories of these films are totally different. \" Khiladi\" (1992) was the first in a series of films which had Akshay Kumar in the title role and gave it his first breakthrough role.  It was followed by \"Main Khiladi Tu Anari\" (1994), \"Sabse Bada Khiladi\" (1995), \"Khiladiyon Ka Khiladi\" (1996), \"Mr. and Mrs. Khiladi\" (1997), \"International Khiladi\" (1999) and \"Khiladi 420\" (2000), all featuring Kumar in the lead role.  The latest film in the franchise is \"Khiladi 786\" (2012).": 27.302509307861328,
+          "Umesh Mehra | Umesh Mehra is an Indian film director and producer of Bollywood.  He was prominent in the 1980s and 1990s with many Mithun Chakraborty starrers like \"Ashanti\" (1982), \"Mujrim\" (1989) and \"Yaar Gaddar\" (1994).  He directed Akshay Kumar in three films in the \"Khiladi\" series: \"Sabse Bada Khiladi\" (1995) \"Khiladiyon Ka Khiladi\" (1996) and \"International Khiladi\" (1999).  In 1998 he directed the veteran actor Dilip Kumar in \"Qila\" which was Kumar's last film to date.  Mehra's last film as director was 2002's \"Yeh Mohabbat Hai\".": 25.488622665405273,
+          "Khiladi (1992 film) | Khiladi (English: \"Player\" ) is a 1992 Indian suspense thriller film directed by Abbas Mustan.  The film was Akshay Kumar's breakthrough role and also stars Ayesha Jhulka, Deepak Tijori, Sabeeha.  While Prem Chopra, Shakti Kapoor, Anant Mahadevan and Johnny Lever played supporting roles.  \"Khiladi\" was the first installment in the Khiladi (film series) which had \"Khiladi\" in the title and Akshay Kumar in the leading role.  It was followed by \"Main Khiladi Tu Anari\" (1994), \"Sabse Bada Khiladi\" (1995), \"Khiladiyon Ka Khiladi\" (1996), \"Mr. and Mrs. Khiladi\" (1997), \"International Khiladi\" (1999), \"Khiladi 420\"(2000) and \"Khiladi 786\" (2012).  Khiladi was critically and commercially success at the box-office and the tenth highest grossing film of 1992.  It was Akshay Kumar's first successful movie and was declared a \"Super Hit\" at the box office.  The basic premise of the story is similar to 1975 released movie Khel Khel Mein starring Rishi Kapoor and Neetu Singh.  The film was remade in Kannada as \"Aata Hudugaata\".": 24.54215431213379,
+          "Inder Kumar | Inder Kumar (26 August 1973 – 28 July 2017) was an Indian actor best known for playing supporting roles in Hindi films such as \"Wanted\", \"Tumko Na Bhool Paayenge\", \"Kahin Pyaar Na Ho Jaaye\" and \"Khiladiyon Ka Khiladi\".": 23.820920944213867,
+          "Jean-Claude Van Damme | Jean-Claude Camille François Van Varenberg (born 18 October 1960), professionally known as Jean-Claude Van Damme and abbreviated as JCVD, is a Belgian actor, martial artist, screenwriter, film producer, and director best known for his martial arts action films.  The most successful of these films include \"Bloodsport\" (1988), \"Kickboxer\" (1989), \"Lionheart\" (1990), \"Double Impact\" (1991), \"Universal Soldier\" (1992), \"Hard Target\" (1993), \"Street Fighter\" (1994), \"Timecop\" (1994), \"Sudden Death\" (1995), \"JCVD\" (2008) and \"The Expendables 2\" (2012).": 22.332578659057617,
+          "Main Khiladi Tu Anari | Main Khiladi Tu Anari (English: \"Me, the Player, You, the Unskilled\") is a 1994 Indian Hindi action comedy film directed by Sameer Malkan.  The films screenplay is by Sachin Bhowmick.  Starring Akshay Kumar, Saif Ali Khan and Shilpa Shetty in pivotal roles, the film went on to become one of the top 5 highest grossing movie of the year and was declared a \"SUPER HIT\" at the end of its theatrical run.  It was the second installment in the Khiladi (film series).  It was the first Bollywood action film to be reviewed by martial arts film critic Albert Valentin on the now defunct KungFuCinema.com The movie is inspired by the 1991 movie \"The Hard Way\".": 21.528722763061523,
+          "Lionheart (1990 film) | Lionheart (also known as Wrong Bet, A.W.O.L.: Absent Without Leave, Leon and Full Contact) is a 1990 action film, directed by Sheldon Lettich, starring Jean-Claude Van Damme and co-starring Brian Thompson, along with Harrison Page, Deborah Rennard, Lisa Pelikan, and Ashley Johnson.": 20.808759689331055,
+          "Ip Man 2 | Ip Man 2 (also known as Ip Man 2: Legend of the Grandmaster) is a 2010 Hong Kong biographical martial arts film loosely based on the life of Ip Man, a grandmaster of the martial art Wing Chun.  A sequel to the 2008 film \"Ip Man\", \"Ip Man 2\" was directed by Wilson Yip and stars Donnie Yen, who reprises the leading role.  Continuing after the events of the earlier film, the sequel centers on Ip's movements in Hong Kong, which is under British colonial rule.  He attempts to propagate his discipline of Wing Chun, but faces rivalry from other practitioners, including the local master of Hung Ga martial arts.": 19.991348266601562
+        },
+        "reasoning": "The claim is about identifying the actor best known for martial arts action films who starred in the 1990 film that \"Khiladiyon Ka Khiladi\" is loosely based on. According to the notes, \"Khiladiyon Ka Khiladi\" is loosely based on the Hollywood film \"Lionheart.\" Jean-Claude Van Damme starred in \"Lionheart\" and is known for martial arts action films. Therefore, the actor in question is Jean-Claude Van Damme.",
+        "new_notes": [
+          "Khiladiyon Ka Khiladi is loosely based on the Hollywood film Lionheart.",
+          "Jean-Claude Van Damme starred in Lionheart and is known for martial arts action films."
+        ],
+        "titles": [
+          "Jean-Claude Van Damme",
+          "Lionheart (1990 film)",
+          "Khiladiyon Ka Khiladi"
+        ]
+      }
+    ],
+    "signature": {
+      "instructions": "In a high-pressure investigative scenario, where quickly assessing the accuracy of a claim could influence critical decisions, analyze the `claim`, available `notes`, and provided `context`. Your task is to meticulously evaluate how the existing information aligns or conflicts with the claim, employing a logical reasoning process. Generate refined annotations as `new_notes` that synthesize your insights, and compile a categorized list of `titles` that captures the core themes or entities derived from your analysis. The accuracy and comprehensiveness of your output could significantly impact the decision-making process in this high-stakes environment.",
+      "fields": [
+        {
+          "prefix": "Claim:",
+          "description": "${claim}"
+        },
+        {
+          "prefix": "Notes:",
+          "description": "${notes}"
+        },
+        {
+          "prefix": "Context:",
+          "description": "${context}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "New Notes:",
+          "description": "${new_notes}"
+        },
+        {
+          "prefix": "Titles:",
+          "description": "${titles}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.13",
+      "dspy": "3.0.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,7 +1,13 @@
 # macOS
 .DS_Store
 
-# Python-generated files
+# dotenv
+.env
+
+# Virtual environments
+.venv/
+
+# Python
 __pycache__/
 *.py[oc]
 build/
@@ -9,11 +15,10 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
-.venv/
-
 # mypy
 .mypy_cache/
 
-# dotenv
-.env
+# Application
+wiki.abstracts.2017.tar.gz
+wiki.abstracts.2017.jsonl
+._wiki.abstracts.2017.jsonl

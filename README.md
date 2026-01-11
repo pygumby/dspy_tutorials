@@ -1,4 +1,5 @@
 # dspy_tutorials
+
 Me coding along various DSPy tutorials
 
 ## Tutorials
@@ -9,3 +10,6 @@ Me coding along various DSPy tutorials
 * Building RAG as Agent
   * [Tutorial](https://dspy.ai/tutorials/agents/)
   * [Code](agents.py)
+* Multi-Hop Retrieval
+  * [Tutorial](https://dspy.ai/tutorials/multihop_search/)
+  * [Code](multihop_search.py)
